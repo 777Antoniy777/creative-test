@@ -1,15 +1,22 @@
-import {UserActionType} from "../../actions/user/action-creator";
+import {updateItem} from "../../actions/action-helpers";
+import {CardsActionType} from "../../actions/cards/action-creator";
 
 const initialState = {
-  pictures: null
+  cards: null
 };
 
 export default function createState(state = initialState, action) {
   switch (action.type) {
-    case UserActionType.SET_USERNAME:
+    case CardsActionType.GET_CARDS:
       return {
         ...state,
-        username: action.payload,
+        cards: action.payload,
+      };
+
+    case CardsActionType.UPDATE_CARD:
+      return {
+        ...state,
+        cards: updateItem(state.cards, action.payload),
       };
 
     default:

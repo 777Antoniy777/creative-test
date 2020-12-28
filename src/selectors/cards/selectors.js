@@ -1,9 +1,5 @@
-const getUsername = (state) => {
-  return state.user.username;
+const getCards = (state) => {
+  return state.cards.cards;
 };
 
-const getAuthorizationStatus = (state) => {
-  return state.user.authorizationStatus;
-};
-
-export {getUsername, getAuthorizationStatus};
+export {getCards};

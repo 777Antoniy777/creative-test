@@ -1,12 +1,18 @@
-const UserActionType = {
-  SET_USERNAME: 'SET_USERNAME',
+const CardsActionType = {
+  GET_CARDS: 'GET_CARDS',
+  UPDATE_CARD: 'UPDATE_CARD'
 };
 
-const UserActionCreator = {
-  setUsername: (data) => ({
-    type: UserActionType.SET_USERNAME,
+const CardsActionCreator = {
+  getCards: (data) => ({
+    type: CardsActionType.GET_CARDS,
+    payload: data,
+  }),
+
+  updateCard: (data) => ({
+    type: CardsActionType.UPDATE_CARD,
     payload: data,
   }),
 };
 
-export {UserActionType, UserActionCreator};
+export {CardsActionType, CardsActionCreator};

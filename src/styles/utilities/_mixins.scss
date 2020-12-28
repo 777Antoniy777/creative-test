@@ -24,6 +24,10 @@
   width: $child-width * 100% / $parent-width;
 }
 
+@mixin set-margin($child-width, $parent-width) {
+  margin-right: $child-width * 100% / $parent-width;
+}
+
 @mixin visually-hidden {
   position: absolute;
   width: 1px;
